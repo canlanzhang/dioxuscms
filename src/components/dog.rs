@@ -59,7 +59,7 @@ pub struct _Dog {
 
 /// ⚡ 修复点 1：使用 Dioxus 0.7 官方推荐的 `#[server]` 宏
 /// Dioxus 会在底层自动将其映射为服务器路由并处理 WASM 端的网络请求
-#[server(SaveDogEndpoint)]
+#[post("/api/dogs")]
 pub async fn save_dog(image: String) -> Result<(), ServerFnError> {
     // 🎯 完美应用方案一：直接在括号中调用 pool()！
     // 提示：SQLx 的宏接收引用，由于 pool() 返回的是 &'static PgPool，本身就是引用，直接丢进去即可
@@ -83,3 +83,4 @@ pub async fn save_dog(image: String) -> Result<(), ServerFnError> {
 
     Ok(())
 }
+

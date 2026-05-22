@@ -27,6 +27,10 @@ pub fn Navbar() -> Element {
                 to: Route::Dogs {  },
                 "Dogs"
             }
+            Link {
+                to: Route::PostEdit{},
+                "PostEdit"
+            }
         }
 
         // The `Outlet` component is used to render the next component inside the layout. In this case, it will render either

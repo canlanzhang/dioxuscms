@@ -19,3 +19,7 @@ pub use navbar::Navbar;
 
 mod dogs;
 pub use dogs::Dogs;
+
+
+pub mod admin; 
+
